@@ -1,0 +1,23 @@
+В PowerSell:
+echo $(netsh.exe interface ip show address)
+
+В Ubuntu:
+~/.bashrc
+
+export winhost=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+if [ ! -n "$(grep -P "[[:space:]]winhost" /etc/hosts)" ]; then
+        printf "%s\t%s\n" "$winhost" "127.0.0.1" | sudo tee -a "/etc/hosts"
+fi
+
+source ~/.bashrc
+
+cat /etc/hosts
+
+
+python3 -m http.server
+netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=192.168.100.3
+netsh interface portproxy show all
+Удаление:
+netsh interface portproxy delete v4tov4 listenport=4000 listenaddress=0.0.0.0
+или
+netsh interface portproxy reset
