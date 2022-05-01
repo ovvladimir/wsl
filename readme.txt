@@ -29,7 +29,7 @@ export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 или !
 export DISPLAY=$(ip route list default | awk '{print $3}'):0
 или
-export DISPLAY=:0
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export LIBGL_ALWAYS_INDIRECT=1
 проверка:
 echo $DISPLAY
