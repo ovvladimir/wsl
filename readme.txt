@@ -56,7 +56,7 @@ sudo apt install gedit -y
 sudo apt install x11-apps -y
 Запуск:
 curl wttr.in - погода
-xcalc, xclock, xeyes, gedit ~/.bashrc
+xcalc, xclock, xeyes, gedit ~/.bashrc, notepad.exe .bashrc (в wsl)
 nautilus &
 
 Удаление:
