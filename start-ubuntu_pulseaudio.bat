@@ -15,10 +15,7 @@ taskkill.exe /T /IM vcxsrv.exe > nul
 rem taskkill.exe /F /T /IM vcxsrv.exe > nul
 
 rem HOST_IP=$(host `hostname` | grep -oP '(\s)\d+(\.\d+){3}' | tail -1 | awk '{ print $NF }' | tr -d '\r')
-rem HOST_IP=192.168.100.3
-
-rem sudo apt install alsa-utils - не обязательно
-rem sudo apt remove --purge pulseaudio alsa-utils
+rem HOST_IP=192.168.xxx.x
 
 rem arecord -f cd | aplay
 rem record=1 в default.pa включает микрофон
