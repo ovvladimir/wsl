@@ -11,5 +11,5 @@ rem WMIC Process Where Caption="vcxsrv.exe" Call Terminate
 rem taskkill /f /im explorer.exe && start explorer.exe
 
 rem ОДИН РАЗ:
-rem sudo /etc/init.d/dbus start &> /dev/null ; sudo service ssh start ;
+rem sudo /etc/init.d/dbus start & > /dev/null ; sudo service ssh start ;
 rem sudo /etc/init.d/dbus status - проверка
